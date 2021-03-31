@@ -1,0 +1,67 @@
+* , ::before, ::after {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+.title {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 27%;
+    border-right: 3px solid black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2rem;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: cursor 500ms infinite,
+               tall 2s steps(12) 1s 1 normal both;
+    
+}
+
+h1 {
+    font-weight: 300;
+}
+
+span {
+    font-weight: bold;
+}
+
+@keyframes tall {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 27%;
+    }
+}
+
+ @keyframes cursor {
+    from {
+        
+        border-right-color: transparent;
+    } 
+    to {
+        
+        border-right-color: black;
+    }
+} 
+
+
+svg {
+    position: absolute;
+    top: 26%;
+    left: 41%;
+    width: 24%;
+    opacity: 0;
+    animation: display 1s ease-in-out forwards;
+    animation-delay: 4s;
+}
+
+@keyframes display {
+    to {
+        opacity: 1;
+    }
+}
